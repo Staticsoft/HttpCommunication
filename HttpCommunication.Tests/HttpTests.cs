@@ -27,5 +27,12 @@ namespace Staticsoft.HttpCommunication.Tests
             Assert.Equal(200, result.StatusCode);
             Assert.Equal("TestResponse", result.Body.Text);
         }
+
+        [Fact]
+        public async Task CanMakeFailingRequest()
+        {
+            var result = await Http.Request<Response>(HttpMethod.Get, "/NonExistingEndpoint");
+            Assert.Equal(404, result.StatusCode);
+        }
     }
 }
