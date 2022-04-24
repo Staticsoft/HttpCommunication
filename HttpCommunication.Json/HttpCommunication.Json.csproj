@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net60;netcoreapp3.1</TargetFrameworks>
@@ -6,16 +6,8 @@
     <RootNamespace>Staticsoft.$(MSBuildProjectName)</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HttpCommunication.Abstractions\HttpCommunication.Abstractions.csproj" />
-  </ItemGroup>
-  
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <Compile Include="..\Compatibility\IsExternalInit.cs" Link="IsExternalInit.cs" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Staticsoft.Extensions.DependencyInjection" Version="1.0.0-1" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -24,5 +16,13 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Staticsoft/HttpCommunication</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HttpCommunication.Abstractions\HttpCommunication.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Staticsoft.Serialization.Net" Version="1.0.0-4" />
+  </ItemGroup>
 
 </Project>

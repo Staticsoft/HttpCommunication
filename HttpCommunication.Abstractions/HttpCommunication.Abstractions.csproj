@@ -17,4 +17,8 @@
     <RepositoryUrl>https://github.com/Staticsoft/HttpCommunication</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Staticsoft.Serialization.Abstractions" Version="1.0.0-4" />
+  </ItemGroup>
+
 </Project>
