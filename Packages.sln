@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpCommunication.Abstractions", "HttpCommunication.Abstractions\HttpCommunication.Abstractions.csproj", "{861DC089-2933-4ED7-90B6-FFE461043CE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpCommunication.Memory", "HttpCommunication.Memory\HttpCommunication.Memory.csproj", "{46827686-B775-40FB-9904-90DEFE1AA3E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpCommunication.Json", "HttpCommunication.Json\HttpCommunication.Json.csproj", "{46827686-B775-40FB-9904-90DEFE1AA3E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
