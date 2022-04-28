@@ -1,4 +1,4 @@
-﻿using Staticsoft.JsonSerialization.Abstractions;
+﻿using Staticsoft.Serialization.Abstractions;
 using System.Text;
 
 namespace Staticsoft.HttpCommunication.Abstractions
