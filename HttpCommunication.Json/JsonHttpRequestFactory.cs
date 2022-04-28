@@ -1,5 +1,5 @@
 ﻿using Staticsoft.HttpCommunication.Abstractions;
-using Staticsoft.JsonSerialization.Abstractions;
+using Staticsoft.Serialization.Abstractions;
 
 namespace Staticsoft.HttpCommunication.Json
 {

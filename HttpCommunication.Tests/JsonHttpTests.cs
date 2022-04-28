@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Staticsoft.HttpCommunication.Json;
-using Staticsoft.JsonSerialization.Net;
+using Staticsoft.Serialization.Net;
 using Staticsoft.Testing;
 using Staticsoft.TestServer;
 
