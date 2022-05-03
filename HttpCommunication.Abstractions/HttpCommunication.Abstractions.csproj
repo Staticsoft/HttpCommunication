@@ -17,6 +17,11 @@
     <RepositoryUrl>https://github.com/Staticsoft/HttpCommunication</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Staticsoft.Serialization.Abstractions" Version="1.0.0-5" />
   </ItemGroup>

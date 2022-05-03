@@ -17,4 +17,4 @@ jobs:
     - name: Create packages
       run: dotnet pack Packages.sln -o Packages -c Release --version-suffix ${{ github.run_number }}
     - name: Publish packages
-      run: dotnet nuget push ./Packages/*.nupkg --source https://nuget.pkg.github.com/Staticsoft/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push ./Packages/*.*nupkg --source https://nuget.pkg.github.com/Staticsoft/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
