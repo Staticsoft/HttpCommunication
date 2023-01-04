@@ -1,14 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net60;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net60</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <RootNamespace>Staticsoft.$(MSBuildProjectName)</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-    <Compile Include="..\Compatibility\IsExternalInit.cs" Link="IsExternalInit.cs" />
-  </ItemGroup>
 
   <PropertyGroup>
     <PackageId>Staticsoft.$(MSBuildProjectName)</PackageId>
@@ -22,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Staticsoft.Serialization.Net" Version="1.0.0-5" />
+    <PackageReference Include="Staticsoft.Serialization.Net" Version="1.0.0-6" />
   </ItemGroup>
 
 </Project>
