@@ -1,4 +1,3 @@
-﻿namespace Staticsoft.HttpCommunication.Abstractions
-{
-    public class EmptyBody { }
-}
+﻿namespace Staticsoft.HttpCommunication.Abstractions;
+
+public class EmptyBody { }

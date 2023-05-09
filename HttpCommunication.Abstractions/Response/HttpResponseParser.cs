@@ -1,7 +1,6 @@
-﻿namespace Staticsoft.HttpCommunication.Abstractions
+﻿namespace Staticsoft.HttpCommunication.Abstractions;
+
+public interface HttpResponseParser
 {
-    public interface HttpResponseParser
-    {
-        T Parse<T>(byte[] body);
-    }
+    T Parse<T>(byte[] body);
 }

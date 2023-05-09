@@ -1,7 +1,6 @@
-﻿namespace Staticsoft.TestServer
+﻿namespace Staticsoft.TestServer;
+
+public class Response
 {
-    public class Response
-    {
-        public string Text { get; init; }
-    }
+    public string Text { get; init; }
 }
