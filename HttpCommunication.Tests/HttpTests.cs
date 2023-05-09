@@ -1,15 +1,15 @@
 ﻿using Staticsoft.HttpCommunication.Abstractions;
+using Staticsoft.Testing.Integration;
 using Staticsoft.TestServer;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Staticsoft.HttpCommunication.Tests;
 
-public abstract class HttpTests<TSPF> : TestBase<TSPF>
-    where TSPF : ServiceProviderFactory, new()
+public abstract class HttpTests : IntegrationTestBase<TestStartup>
 {
     Http Http
-        => Get<Http>();
+        => Client<Http>();
 
     [Fact]
     public async Task CanMakeGetRequest()
