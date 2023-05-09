@@ -1,10 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-namespace Staticsoft.HttpCommunication.Abstractions
+namespace Staticsoft.HttpCommunication.Abstractions;
+
+public interface Http
 {
-    public interface Http
-    {
-        Task<HttpResult<T>> Request<T>(HttpMethod method, string path);
-        Task<HttpResult<T>> Request<T>(HttpMethod method, string path, object body);
-    }
+    Task<HttpResult<T>> Request<T>(HttpMethod method, string path);
+    Task<HttpResult<T>> Request<T>(HttpMethod method, string path, object body);
 }

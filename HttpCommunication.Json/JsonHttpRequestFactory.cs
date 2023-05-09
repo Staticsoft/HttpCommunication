@@ -1,14 +1,13 @@
 ﻿using Staticsoft.HttpCommunication.Abstractions;
 using Staticsoft.Serialization.Abstractions;
 
-namespace Staticsoft.HttpCommunication.Json
-{
-    public class JsonHttpRequestFactory : SerializingHttpRequestFactory
-    {
-        public JsonHttpRequestFactory(JsonSerializer serializer)
-            : base(serializer) { }
+namespace Staticsoft.HttpCommunication.Json;
 
-        protected override string ContentType
-            => "application/json";
-    }
+public class JsonHttpRequestFactory : SerializingHttpRequestFactory
+{
+    public JsonHttpRequestFactory(JsonSerializer serializer)
+        : base(serializer) { }
+
+    protected override string ContentType
+        => "application/json";
 }

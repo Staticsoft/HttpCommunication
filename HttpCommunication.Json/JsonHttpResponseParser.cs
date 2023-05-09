@@ -1,11 +1,10 @@
 ﻿using Staticsoft.HttpCommunication.Abstractions;
 using Staticsoft.Serialization.Abstractions;
 
-namespace Staticsoft.HttpCommunication.Json
+namespace Staticsoft.HttpCommunication.Json;
+
+public class JsonHttpResponseParser : SerializedHttpResponseParser
 {
-    public class JsonHttpResponseParser : SerializedHttpResponseParser
-    {
-        public JsonHttpResponseParser(JsonSerializer serializer)
-            : base(serializer) { }
-    }
+    public JsonHttpResponseParser(JsonSerializer serializer)
+        : base(serializer) { }
 }

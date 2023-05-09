@@ -1,15 +1,14 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Staticsoft.TestServer
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-            => CreateHostBuilder(args).Build().Run();
+namespace Staticsoft.TestServer;
 
-        public static IHostBuilder CreateHostBuilder(string[] args) => Host
-            .CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<TestStartup>());
-    }
+public class Program
+{
+    public static void Main(string[] args)
+        => CreateHostBuilder(args).Build().Run();
+
+    public static IHostBuilder CreateHostBuilder(string[] args) => Host
+        .CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<TestStartup>());
 }

@@ -1,11 +1,10 @@
-﻿namespace Staticsoft.HttpCommunication.Abstractions
+﻿namespace Staticsoft.HttpCommunication.Abstractions;
+
+public enum HttpMethod
 {
-    public enum HttpMethod
-    {
-        Get,
-        Post,
-        Delete,
-        Patch,
-        Put
-    }
+    Get,
+    Post,
+    Delete,
+    Patch,
+    Put
 }

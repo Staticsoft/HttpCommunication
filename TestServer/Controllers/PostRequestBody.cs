@@ -1,7 +1,6 @@
-﻿namespace Staticsoft.TestServer
+﻿namespace Staticsoft.TestServer;
+
+public class PostRequestBody
 {
-    public class PostRequestBody
-    {
-        public string Text { get; set; }
-    }
+    public string Text { get; set; }
 }
