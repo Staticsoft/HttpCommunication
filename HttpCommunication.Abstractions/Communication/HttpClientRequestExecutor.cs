@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
@@ -29,9 +30,7 @@ public class HttpClientRequestExecutor : HttpRequestExecutor
             Method = GetMethod(request.Method),
             RequestUri = new Uri(request.Path, UriKind.RelativeOrAbsolute)
         };
-        message.Content = new ByteArrayContent(request.Body.Value);
-        message.Content.Headers.ContentType = new MediaTypeHeaderValue(request.Body.ContentType);
-
+        SetContent(message, request.Body);
         AddHeaders(message.Headers, request.Headers);
         return message;
     }
@@ -45,6 +44,16 @@ public class HttpClientRequestExecutor : HttpRequestExecutor
         HttpMethod.Put => Net.Http.HttpMethod.Put,
         _ => throw new NotSupportedException()
     };
+
+    static void SetContent(HttpRequestMessage request, HttpBody body)
+    {
+        if (!body.Value.Any()) return;
+
+        var content = new ByteArrayContent(body.Value);
+        content.Headers.ContentType = new MediaTypeHeaderValue(body.ContentType);
+
+        request.Content = content;
+    }
 
     static void AddHeaders(HttpRequestHeaders httpHeaders, IReadOnlyDictionary<string, string> requestHeaders)
     {
